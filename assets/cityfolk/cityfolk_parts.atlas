@@ -1,0 +1,91 @@
+images {
+  image: "/assets/cityfolk/cityfolk_a_arm.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_a_hair.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_a_head.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_a_hips.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_a_neck.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_a_torso.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_b_arm.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_b_head.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_b_hips.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_b_neck.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_b_torso.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_c_arm.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_c_hair.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_c_head.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_c_hips.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_c_neck.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_c_torso.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_d_arm.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_d_head.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_d_hips.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_d_neck.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_d_torso.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_a_leg_lower.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_b_leg_lower.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_c_leg_lower.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_c_leg_upper.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_d_leg_lower.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_a_leg_upper_.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_b_leg_upper_.png"
+}
+images {
+  image: "/assets/cityfolk/cityfolk_d_leg_upper_.png"
+}
+extrude_borders: 2
