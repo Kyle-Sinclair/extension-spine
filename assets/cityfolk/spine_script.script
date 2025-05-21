@@ -1,6 +1,8 @@
 function init(self)
 	self.spine_model_id = msg.url(nil, go.get_id("go"), "spinemodel")
-	spine.add_skin(self.spine_model_id,"cityfolk_a","cityfolk_b")
+	spine.add_skin(self.spine_model_id,"cityfolk_a")
+	spine.add_skin(self.spine_model_id,"cityfolk_b")
+
 end
 
 function final(self)

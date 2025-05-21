@@ -518,6 +518,24 @@ namespace dmSpine
         return 0;
     }
 
+
+    /*# Combine the skin on a spine model with another skin. an attachment to a slo
+     *
+     * @name spine.add_skin
+     * @param url [type:string|hash|url] the spine model for which to set skin
+     * @param spine_skin [type:string|hash] spine skin id
+     * @examples
+     *
+     * The following examples assumes that the spine model has id "spinemodel".
+     *
+     * Add a second skin named "cityfolk_a" to the spine model
+     *
+     * ```lua
+     * function add_skin_to_spine(self)
+	    spine.add_skin(self.spine_model_id,"cityfolk_a")
+     * end
+     * ```
+     */
     static int SpineComp_AddSkin(lua_State* L)
     {
         DM_LUA_STACK_CHECK(L, 0);
@@ -528,21 +546,15 @@ namespace dmSpine
         dmScript::GetComponentFromLua(L, 1, SPINE_MODEL_EXT, 0, (void**)&component, &receiver);
 
         dmhash_t skin_id_a = 0;
-         dmhash_t skin_id_b = 0;
          if (!lua_isnil(L, 2))
             skin_id_a = dmScript::CheckHashOrString(L, 2);
 
-        if (!lua_isnil(L, 3))
-            skin_id_b = dmScript::CheckHashOrString(L, 3);
-        if (!CompSpineModelAddSkin(component, skin_id_a,skin_id_b))
+        if (!CompSpineModelAddSkin(component, skin_id_a))
         {
             char buffer[128];
             return DM_LUA_ERROR("failed to add spine skins '%s' in component %s", dmHashReverseSafe64(skin_id_a), dmScript::UrlToString(&receiver, buffer, sizeof(buffer)));
         }
-        // Put the reverse string on the stack
-       // lua_pushstring(L, str);
 
-        // Return 1 item
         return 0;
     }
 

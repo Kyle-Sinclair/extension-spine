@@ -1467,14 +1467,12 @@ namespace dmSpine
         return false;
     }
 
-     bool CompSpineModelAddSkin(SpineModelComponent* component, dmhash_t skin_id_a,dmhash_t skin_id_b)
+     bool CompSpineModelAddSkin(SpineModelComponent* component, dmhash_t skin_id_a)
     {
-        const char *skin_name = "temp";
         SpineModelResource* spine_model = component->m_Resource;
         SpineSceneResource* spine_scene = spine_model->m_SpineScene;
-        spSkin* mix_skin = spSkin_create(skin_name);
+        spSkin* current_skin = component->m_SkeletonInstance->skin;
         spSkin* skin_a = spine_scene->m_Skeleton->defaultSkin;
-        spSkin* skin_b = spine_scene->m_Skeleton->defaultSkin;
 
         if (skin_id_a)
         {
@@ -1487,19 +1485,10 @@ namespace dmSpine
 
             skin_a = spine_scene->m_Skeleton->skins[*index];
         }
-         if (skin_id_b)
-        {
-            uint32_t* index = spine_scene->m_SkinNameToIndex.Get(skin_id_b);
-            if (!index)
-            {
-                dmLogError("No skin named '%s'", dmHashReverseSafe64(skin_id_b));
-                return false;
-            }
-
-            skin_b = spine_scene->m_Skeleton->skins[*index];
-        }
+        const char *skin_name = "mix_skin";
+        spSkin* mix_skin = spSkin_create(skin_name);
+        spSkin_addSkin(mix_skin,current_skin);
         spSkin_addSkin(mix_skin,skin_a);
-        spSkin_addSkin(mix_skin,skin_b);
         spSkeleton_setSkin(component->m_SkeletonInstance, mix_skin);
         spSkeleton_setSlotsToSetupPose(component->m_SkeletonInstance);
 
